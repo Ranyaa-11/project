@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Balance</title>
+    <style>
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-image: url(https://static.vecteezy.com/system/resources/previews/002/538/570/original/abstract-lavender-lilac-background-free-vector.jpg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e9ecef;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 1200px;
+            height: 70%;
+        }
+        .balance-section {
+            flex: 2;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin-right: 20px;
+            text-align: center;
+            
+        }
+        .balance-section h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        .container h2{
+          font-weight: bold;
+        }
+        .balance-section p {
+            font-size: 24px;
+            font-weight: bold;
+            color:  rgb(90, 7, 44);
+        }
+        .form-section {
+            flex: 2;
+            padding: 20px;
+        }
+        .form-section h2 {
+            text-align: center;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            outline: none;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        }
+        .btn {
+            display: block;
+            width: 470px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background:#7b4d6a;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+          background: rgb(90, 7, 44);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side: Balance Section -->
+        <div class="balance-section">
+            <h2>Your Current Balance</h2>
+            <p>Rs 100.00</p>
+        </div>
+
+        <!-- Right Side: Payment Form -->
+        <div class="form-section">
+            <h2>Top Up Your Account</h2>
+            <form method="post" action="/topup">
+                <div class="form-group">
+                    <label for="amount">Amount (Rupees)</label>
+                    <input type="number" id="amount" name="amount" step="0.01" min="1" required style="width: 450px">
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Payment Method</label>
+                    <select id="payment-method" name="payment_method" required style="width: 470px">
+                        <option value="upi">UPI</option>
+                        <option value="credit_card">Credit Card</option>
+                        <option value="debit_card">Debit Card</option>
+                        <option value="net_banking">Net Banking</option>
+                        <option value="wallet">Wallet</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Proceed with Payment</button><br>
+                <a href="Dash.html">Back to Dashboard</a>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

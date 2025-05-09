@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(https://static.vecteezy.com/system/resources/previews/002/538/570/original/abstract-lavender-lilac-background-free-vector.jpg);
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+        h2 {
+            text-align: center;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            font-size: 16px;
+            color: #495057;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            outline: none;
+        }
+        .form-group input:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background:#7b4d6a;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+          background: rgb(90, 7, 44);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Booking for Bus no. : 1</h2>
+        <p id="availableSeats">Available seats: 10</p>
+
+        <form id="bookingForm">
+            <div class="form-group" style="text-align: left;">
+                <input type="number" id="seats" name="seats" placeholder="Number of seats to book" max="10" min="1" required style="width: 450px; text-align: center; margin: 0 auto; display: block;">
+            </div>
+            <button type="submit" class="btn" style="width: 470px;text-align: center; margin: 0 auto; display: block;">Confirm Booking</button>
+        </form>
+        <a href="Dash.html" style="display: block; text-align: center; margin-top: 20px;">Back to Dashboard</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

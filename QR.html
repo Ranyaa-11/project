@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard with QR Scanner</title>
+  <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+<style>
+     body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-image: url(https://static.vecteezy.com/system/resources/previews/002/538/570/original/abstract-lavender-lilac-background-free-vector.jpg);
+      }
+    #scannerSidebar {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 45%;
+        background-color: #e9ecef;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    #scannerSidebar h3 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    #reader {
+        width: 100%;
+        height: 200px;
+        background-color: #d7cfcf;
+        border-radius: 8px;
+    }
+
+    /* Result area */
+    #scannerResult {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgb(90, 7, 44);
+    }
+    h3{
+        color: rgb(90, 7, 44);
+    }
+    button {
+        display: block;
+        margin: 20px auto 0; /* Center horizontally and add spacing */
+        background: #7b4d6a;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: rgb(90, 7, 44);
+    }
+</style>
+</head>
+<body>
+<div id="scannerSidebar">
+    <h3>Scan QR Code</h3> 
+    <div id="reader"></div>
+    <div id="scannerResult"></div>
+    <button onclick="startScanner()">Start QR Scan</button>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
+

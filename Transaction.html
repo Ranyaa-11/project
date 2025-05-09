@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        background-image: url(https://static.vecteezy.com/system/resources/previews/002/538/570/original/abstract-lavender-lilac-background-free-vector.jpg);
+      }
+        
+        .container {
+            background-color:  #e9ecef;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1100px;
+            height: 60%;
+        }
+        h2 {
+            text-align: center;
+            color:  rgb(90, 7, 44);
+            margin-bottom: 20px;
+        }
+        .balance {
+            font-size: 20px;
+            font-weight: bold;
+            color:  rgb(15, 15, 15);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color:  rgb(90, 7, 44);
+            color: rgb(255, 250, 250);
+            font-weight: bold;
+        }
+        .time, .date, .location {
+            color: #000000;
+            font-size: 14px;
+        }
+        .negative {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            color: #6c757d;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Transaction History</h2>
+        <div class="balance" id="balanceDisplay">Your Balance: Rs 100</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Money</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time">8:15 AM</td>
+                    <td class="date">2025-10-01</td>
+                    <td class="negative">-₹30</td>
+                    <td class="location">Udyavara</td>
+                </tr>
+                <tr>
+                    <td class="time">5:00 PM</td>
+                    <td class="date">2025-10-01</td>
+                    <td class="negative">-₹30</td>
+                    <td class="location">Udyavara</td>
+                </tr>
+                <tr>
+                    <td class="time">8:30 AM</td>                  
+                    <td class="date">2025-10-02</td>
+                    <td class="negative">-₹50</td>
+                    <td class="location">Udupi</td>
+                </tr>
+                <tr>
+                    <td class="time">5:00 PM</td>                  
+                    <td class="date">2025-10-02</td>
+                    <td class="negative">-₹30</td>
+                    <td class="location">Udyavara</td>
+                </tr>
+                <tr>
+                    <td class="time">5:00 PM</td>                  
+                    <td class="date">2025-10-03</td>
+                    <td class="negative">-₹30</td>
+                    <td class="location">Udyavara</td>
+                </tr>
+
+            </tbody>
+            <tbody id="transactionTableBody">
+                <!-- Transactions will be inserted here by JS -->
+            </tbody>
+        </table>
+        <br>
+        <section class="footer">
+            <p>&copy; 2025 Bus Reservation System. All rights reserved.</p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
